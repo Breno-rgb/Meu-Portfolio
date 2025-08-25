@@ -1,0 +1,255 @@
+/* ===== Fundo da página ===== */
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar em links */
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to top left, #0f0f1a, #1b1b4b);
+    text-align: center;
+}
+
+/* ===== Menu de navegação ===== */
+nav {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: #0c0c1a85;
+    border-radius: 40px;
+    border: 2px solid #1e90ff; /* azul sólido */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.25); /* sombra branca fosca */
+
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #1e90ff;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== Seção Inicial ===== */
+h1 {
+    position: relative;
+    padding-top: 100px;
+    margin-top: 300px;
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.25); /* sombra branca fosca */
+}
+
+#inicio img {
+    width: 300px;
+    height: 350px;
+    border-radius: 50%;
+    border: 3px solid #1e90ff;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
+    display: block;
+    margin: 20px auto;
+}
+
+#inicio .profissao {
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ===== Seção Sobre ===== */
+h2 {
+    position: relative;
+    padding-top: 100px;
+    margin-top: 300px;
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
+}
+
+.sobre-texto {
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 200;
+    background-color: #0c0c1a85;
+    border-radius: 40px;
+    border: 2px solid #1e90ff;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
+
+    width: 80%;
+    max-width: 600px;
+    padding: 25px 20px;
+    margin: 40px auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sobre-texto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Seção Contato ===== */
+.contato h3 {
+    position: relative;
+    padding-top: 100px;
+    margin-top: 300px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
+}
+
+.contato .dados {
+    list-style: none;
+    background-color: #0c0c1a85;
+    border-radius: 40px;
+    border: 2px solid #1e90ff;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
+
+    width: 80%;
+    max-width: 600px;
+    padding: 25px 20px;
+    margin: 0 auto 40px auto;
+
+    text-align: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contato .dados:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+.contato .dados li {
+    margin: 10px 0;
+}
+
+.contato .dados a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.contato .dados a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Seção Projetos ===== */
+.projetos h4 {
+    position: relative;
+    padding-top: 300px;
+    padding-bottom: 150px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
+}
+
+.projetos-lista {
+    display: flex;
+    justify-content: center;   /* Centraliza os cards na horizontal */
+    align-items: center;       /* Mantém alinhado verticalmente */
+    gap: 20px;                 /* Espaçamento entre os cards */
+    flex-wrap: wrap;           /* Permite quebrar linha se não couber na tela */
+    width: 100%;               /* Ocupa toda a largura da seção */
+    margin: 0 auto;            /* Garante centralização */
+}
+
+.projeto {
+    flex: 0 0 auto;            /* Mantém cada card no tamanho fixo, sem esticar */
+    width: 350px;
+    height: 350px;
+    background-color: #0c0c1a85;
+    border-radius: 20px;
+    border: 2px solid #1e90ff;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
+
+    text-align: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+.projeto h5 {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e90ff;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+.projeto p {
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: auto;
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
